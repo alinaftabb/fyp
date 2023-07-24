@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { styled } from '@mui/system';
 import '@fontsource/roboto/300.css';
 import Google from '../Media/google.png';
 import Apple from '../Media/apple.png';

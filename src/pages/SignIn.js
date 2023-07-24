@@ -9,8 +9,13 @@ import {
 } from '@mui/material';
 import { EmailTwoTone, VpnKeyRounded } from '@mui/icons-material';
 import { NavLink } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
+import { addUser } from '../store/slices/UserSlice';
+import { useNavigate } from 'react-router-dom';
 
 const SignIn = () => {
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
   const [inputs, setInputs] = useState({});
 
   const handleChange = event => {
@@ -22,16 +27,12 @@ const SignIn = () => {
 
   const handleSubmit = event => {
     event.preventDefault();
-    console.log(inputs);
+    dispatch(addUser(inputs));
+    navigate('/dashboard');
   };
 
   return (
-    <FormControl
-      component='form'
-      align='center'
-      onSubmit={handleSubmit}
-      action='/dashboard'
-    >
+    <FormControl component='form' align='center' onSubmit={handleSubmit}>
       <Typography variant='h5' component={'h1'} sx={{ fontWeight: 'bold' }}>
         Sign In to your account
       </Typography>
