@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import '@fontsource/roboto/300.css';
-import Google from '../Media/google.png';
-import Apple from '../Media/apple.png';
+import Google from '../media/google.png';
+import Apple from '../media/apple.png';
 import {
   Button,
   Grid,

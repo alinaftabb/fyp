@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { Grid, CardMedia, Box } from '@mui/material';
 import '@fontsource/roboto/300.css';
-import WomanOnTech from '../Media/WomanOnTech.mp4';
-import Logo from '../Media/logo.png';
+import WomanOnTech from '../media/WomanOnTech.mp4';
+import Logo from '../media/logo.png';
 import { Outlet } from 'react-router-dom';
 
 const SignUp = () => {
